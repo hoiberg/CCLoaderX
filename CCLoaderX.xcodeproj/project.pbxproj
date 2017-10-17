@@ -11,6 +11,10 @@
 		FA26FBFA1F8A6ADB00650CA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26FBF91F8A6ADB00650CA6 /* ViewController.swift */; };
 		FA26FBFC1F8A6ADB00650CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA26FBFB1F8A6ADB00650CA6 /* Assets.xcassets */; };
 		FA26FBFF1F8A6ADB00650CA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA26FBFD1F8A6ADB00650CA6 /* Main.storyboard */; };
+		FA26FC1C1F8A6B3700650CA6 /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = FA26FC181F8A6B3700650CA6 /* ORSSerialPort.m */; };
+		FA26FC1D1F8A6B3700650CA6 /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA26FC191F8A6B3700650CA6 /* ORSSerialPortManager.m */; };
+		FA26FC1E1F8A6B3700650CA6 /* ORSSerialRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA26FC1A1F8A6B3700650CA6 /* ORSSerialRequest.m */; };
+		FAD0233B1F8CB49000347F52 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55B01F8BB3CE00275479 /* DropZoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,14 @@
 		FA26FBFE1F8A6ADB00650CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA26FC001F8A6ADB00650CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA26FC011F8A6ADB00650CA6 /* CCLoaderX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CCLoaderX.entitlements; sourceTree = "<group>"; };
+		FA26FC151F8A6B3600650CA6 /* CCLoaderX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLoaderX-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA26FC161F8A6B3600650CA6 /* ORSSerialPortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORSSerialPortManager.h; sourceTree = "<group>"; };
+		FA26FC171F8A6B3700650CA6 /* ORSSerialRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORSSerialRequest.h; sourceTree = "<group>"; };
+		FA26FC181F8A6B3700650CA6 /* ORSSerialPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPort.m; sourceTree = "<group>"; };
+		FA26FC191F8A6B3700650CA6 /* ORSSerialPortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPortManager.m; sourceTree = "<group>"; };
+		FA26FC1A1F8A6B3700650CA6 /* ORSSerialRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORSSerialRequest.m; sourceTree = "<group>"; };
+		FA26FC1B1F8A6B3700650CA6 /* ORSSerialPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORSSerialPort.h; sourceTree = "<group>"; };
+		FA9F55B01F8BB3CE00275479 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +67,29 @@
 			children = (
 				FA26FBF71F8A6ADB00650CA6 /* AppDelegate.swift */,
 				FA26FBF91F8A6ADB00650CA6 /* ViewController.swift */,
+				FA9F55B01F8BB3CE00275479 /* DropZoneView.swift */,
 				FA26FBFB1F8A6ADB00650CA6 /* Assets.xcassets */,
 				FA26FBFD1F8A6ADB00650CA6 /* Main.storyboard */,
 				FA26FC001F8A6ADB00650CA6 /* Info.plist */,
+				FA26FC1F1F8A6B4000650CA6 /* ORSSerial */,
 				FA26FC011F8A6ADB00650CA6 /* CCLoaderX.entitlements */,
+				FA26FC151F8A6B3600650CA6 /* CCLoaderX-Bridging-Header.h */,
 			);
 			path = CCLoaderX;
+			sourceTree = "<group>";
+		};
+		FA26FC1F1F8A6B4000650CA6 /* ORSSerial */ = {
+			isa = PBXGroup;
+			children = (
+				FA26FC1B1F8A6B3700650CA6 /* ORSSerialPort.h */,
+				FA26FC181F8A6B3700650CA6 /* ORSSerialPort.m */,
+				FA26FC161F8A6B3600650CA6 /* ORSSerialPortManager.h */,
+				FA26FC191F8A6B3700650CA6 /* ORSSerialPortManager.m */,
+				FA26FC171F8A6B3700650CA6 /* ORSSerialRequest.h */,
+				FA26FC1A1F8A6B3700650CA6 /* ORSSerialRequest.m */,
+			);
+			name = ORSSerial;
+			path = ORSSerialPort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					FA26FBF31F8A6ADB00650CA6 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,8 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA26FC1C1F8A6B3700650CA6 /* ORSSerialPort.m in Sources */,
+				FAD0233B1F8CB49000347F52 /* DropZoneView.swift in Sources */,
+				FA26FC1D1F8A6B3700650CA6 /* ORSSerialPortManager.m in Sources */,
 				FA26FBFA1F8A6ADB00650CA6 /* ViewController.swift in Sources */,
 				FA26FBF81F8A6ADB00650CA6 /* AppDelegate.swift in Sources */,
+				FA26FC1E1F8A6B3700650CA6 /* ORSSerialRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CCLoaderX/CCLoaderX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -271,6 +306,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.hangar42.CCLoaderX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCLoaderX/CCLoaderX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -279,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CCLoaderX/CCLoaderX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -287,6 +325,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.hangar42.CCLoaderX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCLoaderX/CCLoaderX-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
